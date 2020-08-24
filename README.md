@@ -13,7 +13,7 @@ composer require bear/dotenv
 ## Usage
 
 ```php
-use BEAR\Dotenv;
+use BEAR\Dotenv\Dotenv;
 
 (new Dotenv)->load($dir);
 ```

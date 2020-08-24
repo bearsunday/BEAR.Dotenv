@@ -4,15 +4,17 @@ Loads environment variables from .env to $_ENV and $_SERVER.
 
 ## Installation
 
-Installation is super-easy via [Composer](https://getcomposer.org/):
+Installation is via [Composer](https://getcomposer.org/):
 
 ```bash
-$ composer require vlucas/phpdotenv
+composer require bear/phpdotenv
 ```
 
 ## Usage
 
 ```php
+use BEAR\Dotenv;
+
 (new Dotenv)->load($dir);
 ```
 
@@ -22,4 +24,4 @@ If neither file is present, nothing is done. Environment variables must be provi
 
 
 `.env.dist`が`$dir`ディレクトリにあれば読み込まれ環境変数が作られます。ローカルでカスタマイズする場合には`.env`を用意すれば優先して読み込まれます。
-どちらのファイルも無ければ何もしません。環境変数はdotenvライブラリ以外の方法で用意され無ければなりません。
+どちらのファイルも無ければ何もしません。環境変数はdotenvライブラリ以外の方法で用意されなければなりません。

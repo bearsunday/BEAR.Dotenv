@@ -7,7 +7,7 @@ Loads environment variables from .env to $_ENV and $_SERVER.
 Installation is via [Composer](https://getcomposer.org/):
 
 ```bash
-composer require bear/phpdotenv
+composer require bear/dotenv
 ```
 
 ## Usage

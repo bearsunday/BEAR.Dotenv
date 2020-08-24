@@ -49,8 +49,8 @@
         "coverage": [
             "php -dzend_extension=xdebug.so ./vendor/bin/phpunit --coverage-text --coverage-html=build/coverage"
         ],
-        "cs": "phpcs",
-        "cs-fix": "phpcbf",
+        "cs": "./vendor/bin/phpcs",
+        "cs-fix": "./vendor/bin/phpcbf",
         "metrics": [
             "phpmetrics --report-html=build/metrics --excluded-dirs=src/Exception src"
         ]

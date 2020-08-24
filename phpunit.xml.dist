@@ -3,16 +3,22 @@
          xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="all">
-            <directory>tests</directory>
+        <testsuite name="Resource">
+            <directory suffix="Test.php">tests/Resource</directory>
+        </testsuite>
+        <testsuite name="Hypermedia">
+            <directory suffix="Test.php">tests/Hypermedia</directory>
+        </testsuite>
+        <testsuite name="HTTP">
+            <directory suffix="Test.php">tests/Http</directory>
         </testsuite>
     </testsuites>
-    <php>
-        <ini name="error_reporting" value="-1" />
-    </php>
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+        <whitelist processUncoveredFilesFromWhitelist="true" addUncoveredFilesFromWhitelist="false">
             <directory suffix=".php">src</directory>
+            <exclude>
+                <file>src/Bootstrap.php</file>
+            </exclude>
         </whitelist>
     </filter>
 </phpunit>

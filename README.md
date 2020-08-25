@@ -1,5 +1,9 @@
 # BEAR.Dotenv
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bearsunday/BEAR.Dotenv/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bearsunday/BEAR.Dotenv/?branch=master)
+[![Build Status](https://travis-ci.org/bearsunday/BEAR.Dotenv.svg?branch=master)](https://travis-ci.org/bearsunday/BEAR.Dotenv)
+[![Build Status](https://scrutinizer-ci.com/g/bearsunday/BEAR.Dotenv/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bearsunday/BEAR.Dotenv/build-status/master)
+
 Loads environment variables from .env to $_ENV and $_SERVER.
 
 ## Installation

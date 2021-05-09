@@ -6,6 +6,8 @@ namespace BEAR\Dotenv;
 
 use PHPUnit\Framework\TestCase;
 
+use function getenv;
+
 class DotenvTest extends TestCase
 {
     protected Dotenv $dotenv;
@@ -38,5 +40,4 @@ class DotenvTest extends TestCase
         $this->dotenv->load(__DIR__ . '/Fake/dist');
         $this->assertSame(getenv('FOO'), 'BAR');
     }
-
 }

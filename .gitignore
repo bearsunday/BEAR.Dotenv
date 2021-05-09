@@ -4,3 +4,4 @@
 /vendor-bin/tools/vendor/
 /build/
 /phpunit.xml
+composer.lock

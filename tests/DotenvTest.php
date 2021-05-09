@@ -40,4 +40,11 @@ class DotenvTest extends TestCase
         $this->dotenv->load(__DIR__ . '/Fake/dist');
         $this->assertSame(getenv('FOO'), 'BAR');
     }
+
+    public function testLoadNothing(): void
+    {
+        $this->dotenv->load(__DIR__ . '/Fake/none');
+        $this->assertArrayNotHasKey('FOO', $_ENV);
+
+    }
 }

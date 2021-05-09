@@ -41,7 +41,6 @@
         ],
         "tests": [
             "@cs",
-            "./vendor/bin/phpmd src,tests text ./phpmd.xml",
             "./vendor/bin/phpstan analyse -c phpstan.neon --no-progress",
             "./vendor/bin/psalm",
             "@test"

@@ -87,9 +87,6 @@ jobs:
       - name: Install dependencies
         run: composer install --no-interaction --no-progress --prefer-dist
 
-      - name: Run PHP Mess Detector
-        run: ./vendor/bin/phpmd src/di text ./phpmd.xml
-
   static-analysis-composer-require-checker:
     name: Static Analysis with ComposerRequireChecker
     runs-on: ubuntu-latest

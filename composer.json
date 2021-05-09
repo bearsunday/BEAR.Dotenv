@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": ">=7.2.0",
+        "php": "^7.3 || ^8.0",
         "vlucas/phpdotenv": "^5.1"
     },
     "require-dev": {
@@ -47,7 +47,7 @@
             "@test"
         ],
         "coverage": [
-            "php -dzend_extension=xdebug.so ./vendor/bin/phpunit --coverage-text --coverage-html=build/coverage"
+            "php -dzend_extension=xdebug.so -dxdebug.mode=coverage ./vendor/bin/phpunit --coverage-text --coverage-html=build/coverage"
         ],
         "cs": "./vendor/bin/phpcs",
         "cs-fix": "./vendor/bin/phpcbf",

@@ -43,6 +43,7 @@ class DotenvTest extends TestCase
 
     public function testLoadNothing(): void
     {
+        $_ENV = [];
         $this->dotenv->load(__DIR__ . '/Fake/none');
         $this->assertArrayNotHasKey('FOO', $_ENV);
     }

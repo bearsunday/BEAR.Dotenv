@@ -32,4 +32,11 @@ class DotenvTest extends TestCase
         $this->dotenv->load(__DIR__ . '/Fake/env');
         $this->assertSame($_ENV['BAR'], 'BAZ');
     }
+
+    public function testLoadGetEnv(): void
+    {
+        $this->dotenv->load(__DIR__ . '/Fake/dist');
+        $this->assertSame(getenv('FOO'), 'BAR');
+    }
+
 }

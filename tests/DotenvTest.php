@@ -6,9 +6,12 @@ namespace BEAR\Dotenv;
 
 use PHPUnit\Framework\TestCase;
 
+use function getenv;
+
 class DotenvTest extends TestCase
 {
-    protected Dotenv $dotenv;
+    /** @var Dotenv */
+    protected $dotenv;
 
     protected function setUp(): void
     {
@@ -39,4 +42,10 @@ class DotenvTest extends TestCase
         $this->assertSame(getenv('FOO'), 'BAR');
     }
 
+    public function testLoadNothing(): void
+    {
+        $_ENV = [];
+        $this->dotenv->load(__DIR__ . '/Fake/none');
+        $this->assertArrayNotHasKey('FOO', $_ENV);
+    }
 }

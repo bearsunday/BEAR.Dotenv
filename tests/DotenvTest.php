@@ -10,7 +10,8 @@ use function getenv;
 
 class DotenvTest extends TestCase
 {
-    protected Dotenv $dotenv;
+    /** @var Dotenv */
+    protected $dotenv;
 
     protected function setUp(): void
     {

@@ -15,7 +15,7 @@ final class Dotenv
     public function load(string $dir): void
     {
         if (file_exists((string) realpath(sprintf('%s/.env', $dir)))) {
-            PhpDotenv::createImmutable($dir)->load();
+            PhpDotenv::createUnsafeImmutable($dir)->load();
 
             return;
         }
@@ -24,6 +24,6 @@ final class Dotenv
             return;
         }
 
-        (PhpDotenv::createImmutable($dir, '.env.dist'))->load();
+        (PhpDotenv::createUnsafeImmutable($dir, '.env.dist'))->load();
     }
 }
